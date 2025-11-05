@@ -19,7 +19,7 @@ interactive page.
 
 /*Background Image: body*/
 .background-image{
-background-image: url(../Images/coffee-background.jpg);
+background-image: url(Images/coffee-background.jpg);
 height: 500px;
 background-attachment: fixed;
 background-position: center;
@@ -279,4 +279,5 @@ line-height: 80px;
 #grid-footer ul li a:hover{
     color: yellow;
     }
+
 
