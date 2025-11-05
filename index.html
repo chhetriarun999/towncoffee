@@ -1,1 +1,171 @@
+<!-------------------------------------------------------------------------------------
+grid-1.html 
+Arun Chhetri (T00722321)
+Lab Assignment: 7
 
+This assignment will help you practice CSS positioning techniques (static, relative, absolute, 
+fixed, sticky), use CSS Grid to create a structured layout, and add a dropdown menu to the navigation.
+You will design a basic webpage layout and experiment with different styling techniques for a cohesive, 
+interactive page.
+--------------------------------------------------------------------------------------->
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is Assignment 6"> 
+        <meta name="keywords" content="HTML, CSS ">
+        <meta name="author" content="Arun Chhetri">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>
+          Town Coffee
+        </title>
+       <!---add icon link -->
+       <link rel="icon" href="../Images/Coffee-Grid-2.png" type="image/png" sizes="45 45">
+
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+       <link rel="stylesheet" href="grid-1.css" type="text/css">
+        </head>
+        <body class="background-image">
+           
+                
+                
+
+       <!---Header  -->
+            <header class="grid-header"> 
+                <div class="grid-container">
+                    <img src="../Images/Coffee-Grid-00.png" class="grid-logo">
+                    <nav class="grid-nav clearfix">
+                        <ul> 
+                            <li> <a href="#"> Home</a>
+                            <ul class="dropdown">
+                                <li><a href="#"> Locations</a></li> 
+                                <li><a href="#"> Company Information</a></li>
+                                <li><a href="#"> Product Suggestation</a></li>
+                                <li><a href="#"> Events</a></li>
+                                
+                            </ul>
+                            </li>
+
+                            <li><a href="#">Menu </a>
+                                <ul class="dropdown">
+                                    <li><a href="#"> Double Espresso </a></li> 
+                                    <li><a href="#"> Latte </a></li>
+                                    <li><a href="#"> Americano</a></li>
+                                    <li><a href="#"> Macchiato</a></li>
+                                    <li><a href="#"> Cappucciono</a></li>
+                                </ul>
+                            </li>
+
+                            <li> <a href="#"> Services</a></li>
+                            <li> <a href="#"> About Us</a></li>
+                            <li> <a href="#"> Contact Us</a></li>
+                        </ul>
+                    </nav> 
+                </div>
+            </header>
+
+            <!-----------------------Article------------------->
+             
+                <br> 
+               <h1 class="head-text"> Welcome to Town Coffee  </h1> 
+                <br> 
+                <div class="sub-heading"> 
+                    Every person who walks through the doors of our coffee shop is a rare<br> 
+                    individual with particular tastes and preferences
+                </div>
+                <div class="wrapper">
+                    
+                    <div> 
+                        We believe in our people. Every single milestone leading to today's success, is the result of our people's ideas,  passion, inspiration and hard work. For us, as our people grow, Coffee Island grows with them. 
+                        We are committed to knowledge, innovation and coffee excellence. We are true explorers and invest heavily in   knowledge and innovation, as they are the driving forces behind our success. 
+                        We believe in a fair way of conducting business. This means we believe in supporting Direct Trade.  We believe in  making sure that every single activity in which we engage contributes to the economic, environmental and social 
+                        sustainability of the places from where we source our coffee beans, or process and sell our end products and  services.
+                    </div>
+
+                    <div class="nested"> 
+                      <div class="Espresso">
+                        <img src="../Images/Espresso.jpg" alt="coffee" width="300" height="180">
+                       <b>Espresso </b> 
+                        </div> 
+                      <div> 
+                        <img src="../Images/Cafe Latte.jpg" alt="coffee" width="300" height="180">
+                        <b>Latte </b> 
+                      </div> 
+                      <div>
+                        <img src="../Images/americano_coffee.webp" alt="coffee" width="300" height="180">
+                        <b>Americano  </b> 
+                      </div>   
+                      <div>
+                        <img src="../Images/macchito.webp" alt="coffee" width="300" height="180">
+                        <b>Macchiato </b> 
+                      </div> 
+                      <div> 
+                        <img src="../Images/coffee-mocha.jpg" alt="coffee" width="300" height="180">
+                        <b>Caffe Mocha </b> 
+                       </div>
+                       <div> 
+                        <img src="../Images/cold-brew.jpeg" alt="coffee" width="300" height="180">
+                        <b>Cold Brew </b> 
+                       </div>
+                    </div>
+
+                    <div id="cappuchino"> 
+                        <img src="../Images/cappuchino.webp" alt="coffee" width="250" height="400">
+                        <b>Cappucciono </b> 
+                    </div>  
+                    
+                    <div class="relative"> 
+                      <p>   Please select all the items that you want to order and them place it in the cart.
+                        Please select all the items that you want to order and them place it in the cart. 
+                        Please select all the items that you want to order and them place it in the cart.  
+                        Please select all the items that you want to order and them place it in the cart.  
+                    </p>
+                        <div class="absolute"> 
+                            <input type="button" value="Order">  
+                        </div>
+                    </div>
+
+                    <div> 
+                        Please leave your comment here. If you have any suggestions or any complain. <br> 
+                        <textarea placeholder="please leave your commnet here" style="size: 100px ;"> </textarea>
+                    </div>
+
+
+                    <div class="sidebar">
+                    <aside class="side-sidebar"> 
+                        <b> Resources: </b>
+                <ul> 
+                    <li> <a href="#"> Location</a></li>
+                    <li> <a href="#"> Join Us</a></li>
+                    <li> <a href="#"> Job Vaccancies</a></li>
+                    <li> <a href="#"> Events</a></li>
+                    <li> <a href="#"> Partners</a></li>
+                    <li> <a href="#"> Membership </a></li>
+                    <li> <a href="#"> Daily Offers</a></li> 
+                </ul>
+                    </aside> 
+                    </div>
+                </div>
+
+            <br> 
+           
+           
+           
+            <footer id="grid-footer" >
+                <ul>
+                    <li> <a href="#"> Office</a></li>
+                    <li><a href="#"> Market </a></li>
+                    <li> <a href="#"> Policies </a></li>
+                    <li> <a href="#"> Aggrement </a></li>
+                    <li> <a href="#"> Contact </a></li>
+                </ul>
+                <p> &copy All rights reserved.</p>
+                <br> 
+            </footer>
+
+
+
+        
+        </body>
+        </html>
