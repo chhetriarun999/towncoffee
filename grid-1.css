@@ -1,0 +1,282 @@
+/*-------------------------------------------------------------------------------------
+grid-1.css 
+Arun Chhetri (T00722321)
+Lab Assignment: 7
+
+This assignment will help you practice CSS positioning techniques (static, relative, absolute, 
+fixed, sticky), use CSS Grid to create a structured layout, and add a dropdown menu to the navigation.
+You will design a basic webpage layout and experiment with different styling techniques for a cohesive, 
+interactive page.
+---------------------------------------------------------------------------------------*/
+
+
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*Background Image: body*/
+.background-image{
+background-image: url(../Images/coffee-background.jpg);
+height: 500px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/*head text*/
+.head-text{
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    margin: 10% auto;
+    font-family: "Sofia", sans-serif;
+    background-color: rgba(210, 105, 30, 0.5);
+    display: inline-block;
+    border-radius: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+}
+
+
+/*sub-heading text*/
+.sub-heading{
+    text-align: center;
+    font-size: 40px;
+    color:gold ;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+
+
+
+/*Header*/
+.grid-header{
+    background-color: brown;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Header div container */
+.grid-container{
+    margin-left: 10%;
+   margin-right: 10%;
+   display: flex;
+   align-items:center;
+   justify-content: space-between;
+}
+
+/* Header logo */
+ .grid-logo{
+    width: 150px;
+    height: 150px;
+    margin-top: 5px;
+}
+
+/* navigation bar */
+.grid-nav{
+    float: right;
+}
+
+
+/* Header list */
+.grid-nav ul li{
+    display: inline-block;
+    
+    
+}
+
+.grid-nav ul li a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    line-height: 80px;
+}
+
+/*Header elements hover effect*/
+.grid-nav ul li a:hover{
+    color:yellow;
+}
+
+/*Dropdown*/
+.dropdown{
+display: none;
+position: fixed;
+background-color: brown;
+box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+list-style: none;
+min-width: 200px;
+z-index: 1000;
+}
+
+.dropdown li{
+    display: inline-block;
+    padding: 6px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown li a:hover{
+    background-color: grey;
+    
+}
+
+.grid-nav ul li:hover .dropdown {
+    display: block;
+}
+
+
+
+/*************************************Clearfix*************************************/
+.clearfix::after{
+    content:" ";
+    clear:both;
+    display:block;
+}
+
+
+/*************************************Grid*************************************/
+.wrapper{
+    display: grid;
+    /*grid-template-columns: 1fr 2fr 1fr;*/
+    grid-template-columns:repeat(3,1fr);
+    gap: 1em;
+    grid-auto-rows: minmax(100px,auto);
+    
+}
+
+.wrapper > div{
+    padding: 1em;
+    height: 400px;
+}
+
+.wrapper>div:nth-child(odd){
+   
+    color: white;
+}
+
+.wrapper>div:nth-child(even){
+   
+    color: gold;
+}
+
+.nested{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:5px;
+    grid-auto-rows: 200px;
+    width: 900px;
+    color: gold;
+    font-size: large;
+
+}
+
+.nested > div{
+    border: none;
+}
+
+#cappuchino{
+    font-size: large;
+    color: brown;
+}
+
+
+.relative{
+    position: relative;
+    color: yellow;
+   
+}
+
+.absolute{
+    position: absolute;
+    bottom: 0px;
+    margin-left:340px;
+}
+.absolute > input[type="button"]{
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: black; 
+    color: white; 
+    padding-left:35px; 
+    padding-right:35px; 
+    padding-top: 15px; 
+    padding-bottom: 15px;
+}
+
+.sidebar{
+    position: sticky;
+    align-self: start;
+    top: 50px;
+    align-self: start;
+    height: 500px;
+}
+
+.side-sidebar{
+    
+    padding: 20px;
+    font-size: large;
+}
+
+.side-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.side-sidebar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Header list elements */
+.side-sidebar ul li{
+    padding: 10px 20px;
+}
+/* Aside elements hover effect*/
+.side-sidebar ul li a:hover{
+color: blue;
+}
+
+
+
+
+/*************************************Footer- id Selectors*************************************/
+#grid-footer{
+    position: static;
+    display: block;
+    text-align: center;
+    background-color: brown;
+    color: blue;
+    
+}
+
+
+#grid-footer ul li a{
+ padding: 10px 20px;
+ text-decoration: none;
+ color: black;
+line-height: 80px;
+}
+
+#grid-footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#grid-footer li{
+    display: inline;
+}
+
+#grid-footer ul li a:hover{
+    color: yellow;
+    }
+
